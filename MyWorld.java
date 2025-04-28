@@ -11,7 +11,7 @@ public class MyWorld extends World {
         SeaHorse seahorse = new SeaHorse();
         addObject(seahorse,300,200);
         
-        Label scoreLabel = new Label(0,50);
+        scoreLabel = new Label(0,50);
         addObject(scoreLabel,30,30);
         
         createApple();
