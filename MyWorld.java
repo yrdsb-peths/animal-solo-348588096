@@ -7,8 +7,14 @@ public class MyWorld extends World {
         SeaHorse seahorse = new SeaHorse();
         addObject(seahorse,300,200);
         
-        Apple apple = new Apple();
-        addObject(apple,300,0);
+        createApple();
         
+    }
+    
+    public void createApple(){
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple,x,0);
     }
 }
