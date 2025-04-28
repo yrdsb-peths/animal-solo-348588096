@@ -16,6 +16,14 @@ public class SeaHorse extends Actor
             move(1);
         }
         
-        removeTouching(Apple.class);
+        eat();
+    }
+    
+    public void eat(){
+        if(isTouching(Apple.class)){
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+        }
     }
 }
