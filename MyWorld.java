@@ -1,6 +1,10 @@
 import greenfoot.*;
 
 public class MyWorld extends World {
+    
+    public int score = 0;
+    Label scoreLabel;
+    
     public MyWorld() {
         super(600, 400, 1);
         
@@ -12,6 +16,11 @@ public class MyWorld extends World {
         
         createApple();
         
+    }
+    
+    public void increaseScore(){
+        score++;
+        scoreLabel.setValue(score);
     }
     
     public void createApple(){
