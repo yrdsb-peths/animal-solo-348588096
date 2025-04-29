@@ -3,9 +3,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class SeaHorse extends Actor
 {
+    public SeaHorse() {
+        setImage("images/seahorse.png");
+    }
+    
     public void act()
     {
-        setImage("seahorse");
         if(Greenfoot.isKeyDown("left")){
             move(-5);
         }
