@@ -4,9 +4,21 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class SeaHorse extends Actor
 {
     GreenfootSound seahorseSound = new GreenfootSound("seahorse.mp3");
-    GreenfootImage idle = new GreenfootImage("images/idle01.png");
+    GreenfootImage[] idle = new GreenfootImage[4];
     public SeaHorse() {
-        setImage(idle);
+        for(int i=0 ; i<idle.length ; i++)
+        {
+            idle[i] = new GreenfootImage("images/idle" + i +".png"); 
+        }
+        setImage(idle[0]);
+    }
+    
+    int imageIndex = 0; 
+    public void animateSeahorse()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+        
     }
     
     public void act()
@@ -19,6 +31,7 @@ public class SeaHorse extends Actor
         }
         
         eat();
+        animateSeahorse();
     }
     
     public void eat(){
