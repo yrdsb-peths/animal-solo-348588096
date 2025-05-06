@@ -3,8 +3,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class SeaHorse extends Actor
 {
+    GreenfootSound seahorseSound = new GreenfootSound("seahorse.mp3");
+    GreenfootImage idle = new GreenfootImage("images/idle01.png");
     public SeaHorse() {
-        setImage("images/seahorse.png");
+        setImage(idle);
     }
     
     public void act()
@@ -25,6 +27,7 @@ public class SeaHorse extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createApple();
             world.increaseScore();
+            seahorseSound.play();
         }
     }
 }
