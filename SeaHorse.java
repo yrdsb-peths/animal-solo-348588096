@@ -33,20 +33,19 @@ public class SeaHorse extends Actor
     
     public void animateSeahorse()
     {
-        if (animationTimer.millisElapsed()< 1)
+        if (animationTimer.millisElapsed() > 100)
         {
-            return ;
-        }
-        
-        if(facing.equals("right"))
-        {
-            setImage(idleRight[imageIndex]);
-            imageIndex = (imageIndex + 1) % idleRight.length;
-        }
-        else 
-        {
-            setImage(idleLeft[imageIndex]);
-            imageIndex = (imageIndex + 1) % idleLeft.length;
+            animationTimer.mark();
+            if(facing.equals("right"))
+            {
+                setImage(idleRight[imageIndex]);
+                imageIndex = (imageIndex + 1) % idleRight.length;
+            }
+            else 
+            {
+                setImage(idleLeft[imageIndex]);
+                imageIndex = (imageIndex + 1) % idleLeft.length;
+            }
         }
             
     }
