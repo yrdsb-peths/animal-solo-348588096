@@ -13,6 +13,8 @@ public class Apple extends Actor
         setImage("images/apple1.png");    
     }
     
+    int speed = 1; 
+    
     public void act()
     {
         setLocation(getX(), getY()+1);
@@ -24,4 +26,10 @@ public class Apple extends Actor
             world.removeObject(this);
         }
     }
+    
+    public void setSpeed(int spd)
+    {
+        speed = 300;
+        
+    }    
 }

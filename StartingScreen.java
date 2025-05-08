@@ -19,6 +19,7 @@ public class StartingScreen extends World
         super(600, 400, 1); 
         addObject(titleLabel, getWidth()/2, getHeight()/2); 
         prepare();
+        setBackground("images/background.jpg");
     }
 
     public void act()
@@ -42,7 +43,7 @@ public class StartingScreen extends World
         addObject(seaHorse,513,196);
         Label label = new Label("Press <space> to start", 40);
         addObject(label,getWidth()/2, getHeight()/2+60);
-        Label label2 = new Label("Use ? and &#x2191; to Move", 30);
+        Label label2 = new Label("Use \u2190 and \u2192 to Move", 30);
         addObject(label2,getWidth()/2, getHeight()/2+40);
         seaHorse.setLocation(291,135);
     }
