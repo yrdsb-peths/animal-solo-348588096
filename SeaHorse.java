@@ -53,11 +53,11 @@ public class SeaHorse extends Actor
     public void act()
     {
         if(Greenfoot.isKeyDown("left")){
-            move(-5);
+            move(-3);
             facing = "left";
         }
         else if(Greenfoot.isKeyDown("right")){
-            move(5);
+            move(3);
             facing = "right";
         }
         

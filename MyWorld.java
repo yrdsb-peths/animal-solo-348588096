@@ -12,7 +12,7 @@ public class MyWorld extends World {
         setBackground("images/background.jpg");
         
         SeaHorse seahorse = new SeaHorse();
-        addObject(seahorse,300,200);
+        addObject(seahorse,300,300);
         
         scoreLabel = new Label(0,50);
         addObject(scoreLabel,30,30);
