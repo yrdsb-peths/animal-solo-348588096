@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class SeaHorse extends Actor
 {
-    GreenfootSound seahorseSound = new GreenfootSound("seahorse.mp3");
+    GreenfootSound seahorseSound = new GreenfootSound("audio/seahorse.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[4];
     GreenfootImage[] idleLeft = new GreenfootImage[4];
     
